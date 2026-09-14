@@ -16,13 +16,14 @@ import { FinalMessageScreen } from './components/screens/FinalMessageScreen.tsx'
 
 export default function App() {
   const [currentStep, setCurrentStep] = useState<PageStep>('countdown');
-  const [hasMusicStarted, setHasMusicStarted] = useState<boolean>(true);
+  const [hasMusicStarted, setHasMusicStarted] = useState<boolean>(false);
   const [caughtIds, setCaughtIds] = useState<number[]>([]);
   const [currentMessage, setCurrentMessage] = useState<string | null>(null);
   const [isBottleOpen, setIsBottleOpen] = useState<boolean>(false);
 
   // Trigger music on first user interaction
   const handleUserInteraction = () => {
+    window.dispatchEvent(new Event('app-user-interaction'));
     if (!hasMusicStarted) {
       setHasMusicStarted(true);
     }

@@ -117,6 +117,15 @@ export const AudioController: React.FC<AudioControllerProps> = ({
   }, [hasStarted, startTime, endTime]);
 
   useEffect(() => {
+    const startAudioFromUserInteraction = () => {
+      startAudioPlayback();
+    };
+
+    window.addEventListener('app-user-interaction', startAudioFromUserInteraction);
+    return () => window.removeEventListener('app-user-interaction', startAudioFromUserInteraction);
+  }, [startTime, endTime]);
+
+  useEffect(() => {
     const retryAudioAfterInteraction = () => {
       if (!isPlaying) {
         startAudioPlayback();
