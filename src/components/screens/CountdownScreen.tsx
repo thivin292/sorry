@@ -23,6 +23,10 @@ export const CountdownScreen: React.FC<CountdownScreenProps> = ({
   };
 
   useEffect(() => {
+    startCountdown();
+  }, []);
+
+  useEffect(() => {
     if (!isCounting) return;
 
     if (count > 1) {
