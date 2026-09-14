@@ -3,6 +3,9 @@
 // Easily edit all text, passwords, image paths, and timings here
 // ==========================================================
 
+import couplePhotoUrl from './assets/images/azhagii_photo.jpeg';
+import fallbackAudioUrl from '../Pesamale (mp3cut.net).mp3.mpeg';
+
 export const APP_CONFIG = {
   // General & Security
   passcode: '2505',
@@ -22,7 +25,7 @@ export const APP_CONFIG = {
     heading: 'Welcome Back',
     subtitle: 'Some days felt longer, But now, everything feels brighter again. ♡',
     // Path to the polaroid couple image
-    photoPath: '/src/assets/images/azhagii_photo.jpeg',
+    photoPath: couplePhotoUrl,
     buttonText: 'Let’s Continue →',
   },
 
@@ -90,6 +93,6 @@ export const APP_CONFIG = {
     defaultStartSecond: 0,
     defaultEndSecond: 0,
     defaultSongTitle: 'Romantic Butterfly Melody',
-    fallbackAudioUrl: '/Pesamale%20(mp3cut.net).mp3.mpeg',
+    fallbackAudioUrl,
   },
 };
