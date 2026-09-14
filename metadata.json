@@ -1,0 +1,7 @@
+{
+  "name": "For Azhagii - Romantic Butterfly Journey",
+  "description": "A responsive romantic interactive website with glowing butterflies, glassmorphic cards, music player, and heartfelt messages.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
